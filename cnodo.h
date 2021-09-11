@@ -15,6 +15,7 @@ private:
 
     friend class cLista;
     friend class cIterador;
+    friend class rIterador;
 };
 
 #endif // NODE_H
