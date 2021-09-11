@@ -1,9 +1,9 @@
-#ifndef RITERADOR_H
-#define RITERADOR_H
+#ifndef CREVERSEITERADOR_H
+#define CREVERSEITERADOR_H
 
 #include "cnodo.h"
 
-class rIterador
+class cReverseIterador
 {
 private:
     cNodo* pActual;
@@ -13,16 +13,16 @@ private:
     friend class cLista;
 
 public:
-    rIterador();
+    cReverseIterador();
 
     void insertarAdelante(float d);
     float eliminarAdelante();
 
     // Sobrecarga de oepradores
-    void operator =(rIterador& otro);
+    void operator =(cReverseIterador& otro);
 
-    bool operator ==(rIterador& otro);
-    bool operator !=(rIterador& otro);
+    bool operator ==(cReverseIterador& otro);
+    bool operator !=(cReverseIterador& otro);
 
     // Prefijos
     void operator ++();
@@ -35,4 +35,4 @@ public:
     void operator --(int);
 };
 
-#endif // RITERADOR_H
+#endif // CREVERSEITERADOR_H

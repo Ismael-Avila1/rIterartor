@@ -4,7 +4,7 @@
 #include <iostream>
 #include "cnodo.h"
 #include "citerador.h"
-#include "riterador.h"
+#include "creverseiterador.h"
 
 class cLista {
 private:
@@ -14,8 +14,8 @@ private:
     cIterador m_itBegin;
     cIterador m_itEnd;
 
-    rIterador r_itBegin;
-    rIterador r_itEnd;
+    cReverseIterador r_itBegin;
+    cReverseIterador r_itEnd;
 
 public:
     cLista();
@@ -37,8 +37,8 @@ public:
     cIterador& begin();
     cIterador& end();
 
-    rIterador& rBegin();
-    rIterador& rEnd();
+    cReverseIterador& rBegin();
+    cReverseIterador& rEnd();
 };
 
 #endif // CLISTA_H

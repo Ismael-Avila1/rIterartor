@@ -2,7 +2,7 @@
 
 #include "clista.h"
 #include "citerador.h"
-#include "riterador.h"
+#include "creverseiterador.h"
 
 using namespace std;
 
@@ -33,7 +33,7 @@ int main() {
     lst.insertarAlFinal(12);
 
 
-   rIterador it;
+   cReverseIterador it;
 
    // Imprimir
    cout << "Imprimiendo lista..." << endl;

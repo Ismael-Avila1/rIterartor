@@ -80,15 +80,15 @@ cIterador &cLista::end() {
     return m_itEnd;
 }
 
-rIterador &cLista::rBegin() {
+cReverseIterador &cLista::rBegin() {
     r_itBegin.setNodo(final.pAnt);
 
-    return r_itBegin;
+    return cReverseIterador;
 }
 
-rIterador &cLista::rEnd() {
+cReverseIterador &cLista::rEnd() {
     r_itEnd.setNodo(&inicio);
 
-    return r_itEnd;
+    return cReverseIterador;
 }
 
