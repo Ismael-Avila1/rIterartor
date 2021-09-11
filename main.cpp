@@ -2,6 +2,7 @@
 
 #include "clista.h"
 #include "citerador.h"
+#include "riterador.h"
 
 using namespace std;
 
@@ -32,12 +33,12 @@ int main() {
     lst.insertarAlFinal(12);
 
 
-   cIterador it;
+   rIterador it;
 
    // Imprimir
    cout << "Imprimiendo lista..." << endl;
 
-   for(it=lst.begin(); it!=lst.end(); it++)
+   for(it=lst.rBegin(); it!=lst.rEnd(); it++)
         cout << *it << ", ";
 
    cout << endl << endl;
@@ -47,7 +48,7 @@ int main() {
    int cont = 0;
    float numAContar = 68;
 
-   for(it=lst.begin(); it!=lst.end(); it++)
+   for(it=lst.rBegin(); it!=lst.rEnd(); it++)
        if(*it == numAContar)
            cont++;
    cout << "Hay " << cont << " " << numAContar << "'s en la lista";
@@ -58,15 +59,14 @@ int main() {
    // Eliminar
    float eliminarNum = 11;
 
-   for(it=lst.begin(); it!=lst.end(); it++)
+   for(it=lst.rBegin(); it!=lst.rEnd(); it++)
        if(*it == eliminarNum) {
-           it--;
            it.eliminarAdelante();
        }
    cout << "Se eliminaron los " << eliminarNum << " de la lista" << endl;
 
    // Imprimir
-   for(it=lst.begin(); it!=lst.end(); it++)
+   for(it=lst.rBegin(); it!=lst.rEnd(); it++)
         cout << *it << ", ";
 
    cout << endl << endl;
@@ -75,16 +75,15 @@ int main() {
    // Duplicar
    float duplicarNum = 4;
 
-   for(it=lst.begin(); it!=lst.end(); it++)
+   for(it=lst.rBegin(); it!=lst.rEnd(); it++)
        if(*it == duplicarNum) {
            it.insertarAdelante(duplicarNum);
-           it++;
        }
 
    cout << "Se duplicaron los " << duplicarNum << " de la lista" << endl;
 
    // Imprimir
-   for(it=lst.begin(); it!=lst.end(); it++)
+   for(it=lst.rBegin(); it!=lst.rEnd(); it++)
         cout << *it << ", ";
 
    cout << endl << endl;
@@ -94,13 +93,13 @@ int main() {
    float remplazarNum = 4;
    float remplazarCon = 13;
 
-   for(it=lst.begin(); it!=lst.end(); it++)
+   for(it=lst.rBegin(); it!=lst.rEnd(); it++)
        if(*it == remplazarNum)
            *it = 13;
    cout << "Se remplazaron los " << remplazarNum << "' con " << remplazarCon << "' " << endl;
 
    // Imprimir
-   for(it=lst.begin(); it!=lst.end(); it++)
+   for(it=lst.rBegin(); it!=lst.rEnd(); it++)
         cout << *it << ", ";
 
    cout << endl << endl;
