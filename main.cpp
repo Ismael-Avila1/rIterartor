@@ -61,7 +61,10 @@ int main() {
 
    for(it=lst.rBegin(); it!=lst.rEnd(); it++)
        if(*it == eliminarNum) {
+           it++;
            it.eliminarAdelante();
+           if(it == lst.rEnd())
+               it--;
        }
    cout << "Se eliminaron los " << eliminarNum << " de la lista" << endl;
 
